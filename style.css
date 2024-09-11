@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(65, 161, 54, 0.732);
+}
+#heading{
+    background-color: blue;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-style: italic;
+    color: aliceblue;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 20px;
+    height: 200px;
+}
+img{
+    height: 200px;
+    width: 200px;
+    border: 0.5px solid black;
+    
+    border-radius: 20px;
+}
+.scores{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+}
+p{
+    color:brown;
+    font-size: 2rem;
+    font-weight: bolder;
+    
+
+}
+h2{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bolder;
+    color: white;
+}
+.animations{
+    border: 5px solid black;
+    border-radius: 30px;
+}
+.btn{
+    color: red;
+    font-size: 30px;
+    border-radius: 10px;
+    align-items: center;
+    background-color: aliceblue;
+
+}
