@@ -31,10 +31,13 @@ ani();
 
 
 function chooseSymbol()
-{   let computerInput=Math.floor(Math.random()*2);
+{   
     for(let i=0;i<3;i++){
         images[i].addEventListener("click",()=>{
+            let computerInput=Math.floor(Math.random()*3);
             var userInput=i;
+            console.log("user",userInput);
+            console.log("computer ",computerInput)
             chooseWinner(userInput,computerInput);
             
             
@@ -89,6 +92,7 @@ function chooseWinner(userInput,computerInput){
     }
     Winner="Winner is "+ Winner;
     h2.innerText=Winner;
+    
 
 }
 
