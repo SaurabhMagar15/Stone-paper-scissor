@@ -1,59 +1,146 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    background-color: rgba(65, 161, 54, 0.732);
+/* ================== RESET ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
-#heading{
-    background-color: blue;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    font-style: italic;
-    color: aliceblue;
-}
-.container{
+
+/* ================== BODY ================== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #e8eaf6);
+    color: #222;
     display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    gap: 20px;
-    height: 200px;
+    flex-direction: column;
+    align-items: center;
 }
-img{
-    height: 200px;
-    width: 200px;
-    border: 0.5px solid black;
-    
+
+/* ================== HEADING ================== */
+#heading {
+    width: 100%;
+    padding: 25px 0;
+    background: linear-gradient(to right, #00bcd4, #3f51b5);
+    color: white;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ================== MAIN GAME ================== */
+.game {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* ================== GAME OPTIONS ================== */
+.container {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container div {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.container div:hover {
+    transform: translateY(-10px) scale(1.05);
+    border: 2px solid green;
+}
+
+/* ================== IMAGES ================== */
+img {
+    height: 160px;
+    width: 160px;
     border-radius: 20px;
 }
-.scores{
-    text-align: center;
+
+/* ================== WINNER TEXT ================== */
+.winnerText {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #ff5722;
+    min-height: 35px;
+}
+
+/* ================== SCORES ================== */
+.scores {
     display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 50px;
+    gap: 80px;
+    background: #ffffff;
+    padding: 25px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
-p{
-    color:brown;
-    font-size: 2rem;
-    font-weight: bolder;
-    
 
-}
-h2{
+.yourScore,
+.computer {
     text-align: center;
-    margin-top: 50px;
-    font-weight: bolder;
-    color: white;
 }
-.animations{
-    border: 5px solid black;
-    border-radius: 30px;
-}
-.btn{
-    color: red;
-    font-size: 30px;
-    border-radius: 10px;
-    align-items: center;
-    background-color: aliceblue;
 
+.yourScore p:first-child,
+.computer p:first-child {
+    font-size: 1.3rem;
+    color: #3f51b5;
+    text-transform: uppercase;
+}
+
+.yourScore p:last-child,
+.computer p:last-child {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ================== RESULT ================== */
+.result-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #009688;
+    min-height: 35px;
+}
+
+/* ================== BUTTON ================== */
+.btn {
+    margin-bottom: 50px;
+    padding: 14px 45px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+    .scores {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 40px;
+    }
+
+    img {
+        height: 140px;
+        width: 140px;
+    }
 }
